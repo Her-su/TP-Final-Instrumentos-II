@@ -2175,30 +2175,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <img src="https://ecohabitar.org/wp-content/uploads/2022/01/techo_verde1-1024x683.jpg" alt="cubierta_verde" />
 <figcaption aria-hidden="true">cubierta_verde</figcaption>
 </figure>
-<h1 id="trabajo-final-instrumentos-de-análisis-urbanos-ii"><strong>TRABAJO FINAL (Instrumentos de Análisis Urbanos II)</strong></h1>
-<h2 id="paso-1-planteo-de-la-pregunta-y-mínima-presentación-del-tema."><strong>Paso 1: Planteo de la pregunta y mínima presentación del tema.</strong></h2>
-<h3 id="introducción"><strong>Introducción</strong></h3>
+<h3 id="paso-1-planteo-de-la-pregunta-y-mínima-presentación-del-tema."><strong>Paso 1: Planteo de la pregunta y mínima presentación del tema.</strong></h3>
+<h4 id="introducción"><strong>Introducción</strong></h4>
 <p>Este informe tiene como objetivo analizar el dataset de techos verdes en Buenos Aires y responder a la pregunta:
 ¿Cuál es la distribución de los techos verdes en la ciudad?</p>
-<h3 id="preguntas-de-investigación"><strong>Preguntas de Investigación</strong></h3>
+<h4 id="preguntas-de-investigación"><strong>Preguntas de Investigación</strong></h4>
 <ul>
 <li>¿Cuántos techos verdes existen en Buenos Aires?</li>
 <li>¿Cuál es la superficie total de techos verdes por barrio en la ciudad?</li>
 <li>¿Cuál es la ubicación geográfica de los techos verdes más grandes?</li>
 </ul>
-<h2 id="paso-2-descripción-de-los-pasos-y-posibles-obstáculos"><strong>Paso 2: Descripción de los pasos y posibles obstáculos</strong></h2>
-<h3 id="cargar-paquetes-necesarios"><strong>Cargar paquetes necesarios</strong></h3>
+<h3 id="paso-2-descripción-de-los-pasos-y-posibles-obstáculos"><strong>Paso 2: Descripción de los pasos y posibles obstáculos</strong></h3>
+<h4 id="cargar-paquetes-necesarios"><strong>Cargar paquetes necesarios</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h2 id="paso-3importación-de-datos-o-acceso-de-los-mismos"><strong>Paso 3:Importación de datos o acceso de los mismos</strong></h2>
-<h3 id="obtener-y-cargar-los-datos"><strong>Obtener y cargar los datos</strong></h3>
+<h3 id="paso-3importación-de-datos-o-acceso-de-los-mismos"><strong>Paso 3:Importación de datos o acceso de los mismos</strong></h3>
+<h4 id="obtener-y-cargar-los-datos"><strong>Obtener y cargar los datos</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="importación-de-datos-o-scrapping"><strong>Importación de datos o scrapping</strong></h3>
+<h4 id="importación-de-datos-o-scrapping"><strong>Importación de datos o scrapping</strong></h4>
 <p>En este paso, ya hemos importado los datos del dataset de la web (BA data).</p>
-<h3 id="exploración-inicial-de-los-datos-head-y-summary"><strong>Exploración inicial de los datos (head y summary)</strong></h3>
+<h4 id="exploración-inicial-de-los-datos-head-y-summary"><strong>Exploración inicial de los datos (head y summary)</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>                                          WKT id id_techo publico_pr
 1 POINT (-58.3769377506221 -34.5930608985007)  1        1    Público
@@ -2300,50 +2299,49 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
                    
                    </code></pre>
 </div>
-<h2 id="paso-4-limpieza-y-transformación-de-datos"><strong>Paso 4: Limpieza y transformación de datos</strong></h2>
-<h3 id="eliminar-filas-duplicadas"><strong>Eliminar filas duplicadas</strong></h3>
+<h3 id="paso-4-limpieza-y-transformación-de-datos"><strong>Paso 4: Limpieza y transformación de datos</strong></h3>
+<h4 id="eliminar-filas-duplicadas"><strong>Eliminar filas duplicadas</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="tratamiento-de-valores-faltantes"><strong>Tratamiento de valores faltantes</strong></h3>
+<h4 id="tratamiento-de-valores-faltantes"><strong>Tratamiento de valores faltantes</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="transformación-de-variables"><strong>Transformación de variables</strong></h3>
+<h4 id="transformación-de-variables"><strong>Transformación de variables</strong></h4>
 <p>techos_verdes<span class="math inline">\(Superficie &lt;- as.numeric(gsub(&quot;,&quot;, &quot;.&quot;, techos_verdes\)</span>Superficie))</p>
-<h3 id="paso-5-visualización-de-la-información"><strong>Paso 5: Visualización de la información</strong></h3>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h2 id="paso-5-visualización-de-la-información-1"><strong>Paso 5: Visualización de la información</strong></h2>
-<h3 id="gráfico-de-barras-de-la-cantidad-de-techos-verdes-por-barrio"><strong>Gráfico de barras de la cantidad de techos verdes por barrio</strong></h3>
+<h3 id="paso-5-visualización-de-la-información"><strong>Paso 5: Visualización de la información</strong></h3>
+<h4 id="gráfico-de-barras-de-la-cantidad-de-techos-verdes-por-barrio"><strong>Gráfico de barras de la cantidad de techos verdes por barrio</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="tpfinal_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
-<h3 id="a-continuacion-se-acomodan-las-etiquetas"><strong>A continuacion se acomodan las etiquetas</strong></h3>
+<h4 id="a-continuacion-se-acomodan-las-etiquetas"><strong>A continuacion se acomodan las etiquetas</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="tpfinal_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="aqui-se-destacan-los-barrios-con-mas-techos-verdes-agrgandoles-color"><strong>Aqui se destacan los barrios con mas techos verdes agrgandoles color</strong></h3>
+<h4 id="aqui-se-destacan-los-barrios-con-mas-techos-verdes-agrgandoles-color"><strong>Aqui se destacan los barrios con mas techos verdes agrgandoles color</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="tpfinal_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
 </div>
-<h3 id="a-continuacion-secomparan-los-barrios-pero-reuniendo-la-superficie-total-de-techos-verdes-por-barrio.-para-esto-se-crea-un-nuevo-dataset-superficie_barrios-con-la-suma"><strong>A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma</strong></h3>
+<h4 id="a-continuacion-secomparan-los-barrios-pero-reuniendo-la-superficie-total-de-techos-verdes-por-barrio.-para-esto-se-crea-un-nuevo-dataset-superficie_barrios-con-la-suma"><strong>A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="se-oredenan-los-datos-de-mayor-a-menor"><strong>Se oredenan los datos de mayor a menor</strong></h3>
+<h4 id="se-oredenan-los-datos-de-mayor-a-menor"><strong>Se oredenan los datos de mayor a menor</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<h3 id="se-crea-un-grafico-de-barras-para-comparar-ahora-los-barrios-de-acuerdo-con-las-superficies"><strong>Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies</strong></h3>
+<h4 id="se-crea-un-grafico-de-barras-para-comparar-ahora-los-barrios-de-acuerdo-con-las-superficies"><strong>Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="tpfinal_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
 </div>
-<h3 id="a-continuación-se-cargan-las-librerias-geoar-y-leaflet-para-generar-un-mapa-interactivo-con-la-localizacion-del-barrio-de-monserrat"><strong>A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat</strong></h3>
+<h4 id="a-continuación-se-cargan-las-librerias-geoar-y-leaflet-para-generar-un-mapa-interactivo-con-la-localizacion-del-barrio-de-monserrat"><strong>A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
@@ -2351,21 +2349,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-29855e13a39eec3633ef" style="width:624px;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-29855e13a39eec3633ef">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addMarkers","args":[-34.6129737070506,-58.3830757855256,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.6129737070506,-34.6129737070506],"lng":[-58.3830757855256,-58.3830757855256]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4066fb706a517886eec7" style="width:624px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-4066fb706a517886eec7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addMarkers","args":[-34.6129737070506,-58.3830757855256,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.6129737070506,-34.6129737070506],"lng":[-58.3830757855256,-58.3830757855256]}},"evals":[],"jsHooks":[]}</script>
 </div>
-<h3 id="luego-se-suma-al-mapa-la-geolocalizacion-de-las-cubiertas-del-dot-en-saavedra-belgrano-y-nuñez-que-son-la-superficies-verdes-mas-importantes-de-caba-incluida-en-el-dataset"><strong>Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset</strong></h3>
+<h4 id="luego-se-suma-al-mapa-la-geolocalizacion-de-las-cubiertas-del-dot-en-saavedra-belgrano-y-nuñez-que-son-la-superficies-verdes-mas-importantes-de-caba-incluida-en-el-dataset"><strong>Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset</strong></h4>
 <div class="layout-chunk" data-layout="l-body">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4f1792a91803d1415d28" style="width:624px;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-4f1792a91803d1415d28">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircles","args":[-34.5453295637046,-58.487777771958,300,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5471910926648,-58.4466777777443,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5604242454826,-58.4513817563059,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5402781887907,-58.4734837459416,100,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.5604242454826,-34.5402781887907],"lng":[-58.487777771958,-58.4466777777443]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-352291ae089d5ab287aa" style="width:624px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-352291ae089d5ab287aa">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircles","args":[-34.5453295637046,-58.487777771958,300,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5471910926648,-58.4466777777443,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5604242454826,-58.4513817563059,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5402781887907,-58.4734837459416,100,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.5604242454826,-34.5402781887907],"lng":[-58.487777771958,-58.4466777777443]}},"evals":[],"jsHooks":[]}</script>
 </div>
-<h2 id="comentarios-finales"><strong>Comentarios finales</strong></h2>
-<h3 id="conclusiones"><strong>Conclusiones</strong>:</h3>
+<h3 id="comentarios-finales"><strong>Comentarios finales</strong></h3>
+<h4 id="conclusiones"><strong>Conclusiones</strong>:</h4>
 <p>En el presente informe, hemos examinado el conjunto de datos relacionados con techos verdes en la ciudad de Buenos Aires y hemos respondido a nuestras preguntas de investigación. Durante este análisis, hemos observado una diversa distribución de techos verdes en varios barrios de la ciudad. Notablemente, Monserrat encabeza la lista con la mayor cantidad de techos verdes, seguido de cerca por el barrio de Recoleta.</p>
 <p>Sin embargo, es fundamental destacar que la importancia de estos techos verdes no solo radica en su cantidad, sino principalmente en su superficie. Esto se debe a que la superficie de estos techos representa, en última instancia, una contribución significativa al área absorbente en la superficie urbana impermeabilizada, además de desempeñar un papel crucial en la mitigación de los efectos de la isla de calor en la ciudad.</p>
 <p>Al observar los resultados desde esta perspectiva, notamos que el orden de importancia se reconfigura de manera significativa. En este nuevo enfoque, el barrio de Saavedra se destaca como el principal contribuyente en términos de superficie de techos verdes en la ciudad. Esto se evidencia claramente en el mapa, donde la concentración de techos verdes se encuentra principalmente en la cubierta del DOT. Seguido por los barrios de Belgrano y Nuñez.</p>
 <p>Es importante tener en cuenta que, aparte de los hallazgos, debemos considerar las limitaciones de los datos utilizados en este estudio. Esto incluye posibles deficiencias en la actualización de la información o en la calidad de los datos recopilados, factores que podrían influir en nuestras conclusiones.</p>
-<h3 id="obstáculosdesafios"><strong>Obstáculos/Desafios</strong>:</h3>
+<h4 id="obstáculosdesafios"><strong>Obstáculos/Desafios</strong>:</h4>
 <p>Durante el proceso, enfrentamos el desafío de tratar los valores faltantes y transformar la variable de superficie en un formato numérico. Además, la importancia de pensar el analisis en terminos de las varibales significativas en el marco del estudio. Finalmente es importante tener en cuenta que este análisis es preliminar y podría requerir un estudio más detallado en el futuro.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

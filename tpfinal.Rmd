@@ -22,45 +22,44 @@ Una cubierta vegetal ofrece numerosos beneficios a nivel económico, ecológico 
 ![cubierta_verde](https://ecohabitar.org/wp-content/uploads/2022/01/techo_verde1-1024x683.jpg)
 
 
-# **TRABAJO FINAL (Instrumentos de Análisis Urbanos II)**
 
 
-## **Paso 1: Planteo de la pregunta y mínima presentación del tema.**
+### **Paso 1: Planteo de la pregunta y mínima presentación del tema.**
 
-### **Introducción**
+#### **Introducción**
 Este informe tiene como objetivo analizar el dataset de techos verdes en Buenos Aires y responder a la pregunta: 
 ¿Cuál es la distribución de los techos verdes en la ciudad?
 
-### **Preguntas de Investigación**
+#### **Preguntas de Investigación**
 
 - ¿Cuántos techos verdes existen en Buenos Aires?
 - ¿Cuál es la superficie total de techos verdes por barrio en la ciudad?
 - ¿Cuál es la ubicación geográfica de los techos verdes más grandes?
 
-## **Paso 2: Descripción de los pasos y posibles obstáculos**
+### **Paso 2: Descripción de los pasos y posibles obstáculos**
 
-### **Cargar paquetes necesarios**
+#### **Cargar paquetes necesarios**
 
 
 ```{r}
 library(tidyverse)
 ```
 
-## **Paso 3:Importación de datos o acceso de los mismos**
+### **Paso 3:Importación de datos o acceso de los mismos**
 
-### **Obtener y cargar los datos**
+#### **Obtener y cargar los datos**
 
 ```{r}
 url <- "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-de-proteccion-ambiental/mapa-techos-verdes/mapa-techos-verdes.csv"
 techos_verdes <- read.csv(url)
 ```
 
-### **Importación de datos o scrapping**
+#### **Importación de datos o scrapping**
 
 En este paso, ya hemos importado los datos del dataset de la web (BA data).
 
 
-### **Exploración inicial de los datos (head y summary)** 
+#### **Exploración inicial de los datos (head y summary)** 
 
 ```{r}
 head(techos_verdes)
@@ -70,35 +69,34 @@ summary(techos_verdes)
 ```
 
 
-## **Paso 4: Limpieza y transformación de datos**
+### **Paso 4: Limpieza y transformación de datos**
 
-### **Eliminar filas duplicadas**
+#### **Eliminar filas duplicadas**
 
 ```{r}
 techos_verdes <- techos_verdes[!duplicated(techos_verdes), ]
 ```
 
 
-### **Tratamiento de valores faltantes**
+#### **Tratamiento de valores faltantes**
 
 ```{r}
 techos_verdes <- techos_verdes %>% drop_na()
 ```
 
 
-### **Transformación de variables**
+#### **Transformación de variables**
 
 techos_verdes$Superficie <- as.numeric(gsub(",", ".", techos_verdes$Superficie))
 
-### **Paso 5: Visualización de la información**
 
 ```{r}
 library(ggplot2)
 ```
 
-## **Paso 5: Visualización de la información**
+### **Paso 5: Visualización de la información**
 
-### **Gráfico de barras de la cantidad de techos verdes por barrio**
+#### **Gráfico de barras de la cantidad de techos verdes por barrio**
 
 ```{r}
 ggplot(techos_verdes, aes(x = barrio)) +
@@ -106,7 +104,7 @@ ggplot(techos_verdes, aes(x = barrio)) +
   labs(title = "Cantidad de Techos Verdes por Barrio")
 ```
 
-### **A continuacion se acomodan las etiquetas**
+#### **A continuacion se acomodan las etiquetas**
 
 ```{r}
 ggplot(techos_verdes, aes(x = barrio)) +
@@ -118,7 +116,7 @@ ggplot(techos_verdes, aes(x = barrio)) +
 library(dplyr)
 ```
 
-### **Aqui se destacan los barrios con mas techos verdes agrgandoles color** 
+#### **Aqui se destacan los barrios con mas techos verdes agrgandoles color** 
 
 ```{r}
 ggplot(techos_verdes, aes(x = barrio)) +
@@ -131,7 +129,7 @@ ggplot(techos_verdes, aes(x = barrio)) +
            fill = "orange")
 ```
 
-### **A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma**
+#### **A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma**
 
 ```{r}
 superficie_barrios <- techos_verdes %>%
@@ -140,7 +138,7 @@ superficie_barrios <- techos_verdes %>%
 
 ```
 
-### **Se oredenan los datos de mayor a menor**
+#### **Se oredenan los datos de mayor a menor**
 
 ```{r}
 superficie_barrios <- superficie_barrios %>%
@@ -148,7 +146,7 @@ superficie_barrios <- superficie_barrios %>%
 ```
 
 
-### **Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies**
+#### **Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies**
 
 ```{r}
 ggplot(superficie_barrios, aes(x = reorder(barrio, -superficie_Total), y = superficie_Total)) +
@@ -161,7 +159,7 @@ ggplot(superficie_barrios, aes(x = reorder(barrio, -superficie_Total), y = super
 
 
 
-### **A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat**
+#### **A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat**
 
 ```{r}
 library(geoAr)
@@ -178,7 +176,7 @@ leaflet() %>%
   geoAr::addArgTiles()
 ```
 
-### **Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset**
+#### **Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset**
 
 
 ```{r}
@@ -192,9 +190,9 @@ leaflet() %>%
 
 
 
-## **Comentarios finales**
+### **Comentarios finales**
 
-### **Conclusiones**: 
+#### **Conclusiones**: 
 
 En el presente informe, hemos examinado el conjunto de datos relacionados con techos verdes en la ciudad de Buenos Aires y hemos respondido a nuestras preguntas de investigación. Durante este análisis, hemos observado una diversa distribución de techos verdes en varios barrios de la ciudad. Notablemente, Monserrat encabeza la lista con la mayor cantidad de techos verdes, seguido de cerca por el barrio de Recoleta.
 
@@ -204,7 +202,7 @@ Al observar los resultados desde esta perspectiva, notamos que el orden de impor
 
 Es importante tener en cuenta que, aparte de los hallazgos, debemos considerar las limitaciones de los datos utilizados en este estudio. Esto incluye posibles deficiencias en la actualización de la información o en la calidad de los datos recopilados, factores que podrían influir en nuestras conclusiones.
 
-### **Obstáculos/Desafios**:
+#### **Obstáculos/Desafios**:
 
 Durante el proceso, enfrentamos el desafío de tratar los valores faltantes y transformar la variable de superficie en un formato numérico. Además, la importancia de pensar el analisis en terminos de las varibales significativas en el marco del estudio. Finalmente es importante tener en cuenta que este análisis es preliminar y podría requerir un estudio más detallado en el futuro.
 

@@ -16,3 +16,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+
+
+
+
+![logo_tidy](https://rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/ds.png)

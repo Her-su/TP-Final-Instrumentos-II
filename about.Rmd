@@ -8,6 +8,8 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
+
 Aqui se encuentra el Trabajo Práctico Final del curso: MU106 - Instrumentos de Análisis Territorial Aplicados a Estudios Urbanos - Este seminario ha sido desarrollado en el marco de la Maestría de Economia Urbana. 
 
 Dictada por los profesores: Juan Pablo Ruiz Nicolini y Pablo Tiscornia. 
