@@ -8,6 +8,7 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+![logo_tidy](https://rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/ds.png)
 
 
 Aqui se encuentra el Trabajo Práctico Final del curso: MU106 - Instrumentos de Análisis Territorial Aplicados a Estudios Urbanos - Este seminario ha sido desarrollado en el marco de la Maestría de Economia Urbana. 
@@ -16,3 +17,5 @@ Dictada por los profesores: Juan Pablo Ruiz Nicolini y Pablo Tiscornia.
 
 El ejecicio fue realizado sobre una base de datos tomada de (Buenos Aires Data)  
 Fuente del data set: https://data.buenosaires.gob.ar/dataset/
+
+

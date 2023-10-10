@@ -20,4 +20,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-![logo_tidy](https://rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/ds.png)
+![Foto_EM](https://live.staticflickr.com/3688/11484582503_b436935fcd_b.jpg)
+
