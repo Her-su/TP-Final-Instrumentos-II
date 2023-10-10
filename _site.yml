@@ -1,0 +1,12 @@
+name: "TP-Final-Instrumentos-II"
+title: "Trabajo Final Instrumentos II"
+description: |
+  Hernán Baulo Darhanpé
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Inicio"
+      href: index.html
+    - text: "Acerca de"
+      href: about.html
+output: distill::distill_article
