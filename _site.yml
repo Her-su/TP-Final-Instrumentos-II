@@ -9,4 +9,7 @@ navbar:
       href: index.html
     - text: "Acerca de"
       href: about.html
+  left:
+    - text: "Trabajo Final"
+      href: tpfinal.html
 output: distill::distill_article

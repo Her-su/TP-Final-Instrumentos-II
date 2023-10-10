@@ -88,29 +88,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Trabajo Final Instrumentos II</title>
+  <title>Trabajo Final Instrumentos II: Monitoreo de Techos verdes en CABA</title>
 
-  <meta property="description" itemprop="description" content="Hernán Baulo Darhanpé"/>
+  <meta property="description" itemprop="description" content="Colaboración para la mitigación del efecto isla de calor en la ciudad."/>
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2023-10-10"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-10-10"/>
+  <meta name="article:author" content="Hernán Baulo Darhanpé"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Trabajo Final Instrumentos II"/>
+  <meta property="og:title" content="Trabajo Final Instrumentos II: Monitoreo de Techos verdes en CABA"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Hernán Baulo Darhanpé"/>
+  <meta property="og:description" content="Colaboración para la mitigación del efecto isla de calor en la ciudad."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Trabajo Final Instrumentos II"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Trabajo Final Instrumentos II"/>
-  <meta property="twitter:description" content="Hernán Baulo Darhanpé"/>
+  <meta property="twitter:title" content="Trabajo Final Instrumentos II: Monitoreo de Techos verdes en CABA"/>
+  <meta property="twitter:description" content="Colaboración para la mitigación del efecto isla de calor en la ciudad."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Trabajo Final Instrumentos II"]},{"type":"character","attributes":{},"value":["Hernán Baulo Darhanpé\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Monitoreo de Techos verdes en CABA"]},{"type":"character","attributes":{},"value":["Colaboración para la mitigación del efecto isla de calor en la ciudad.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Hernán Baulo Darhanpé"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/hern%C3%A1n-baulo-darhanp%C3%A9-893ba913/?locale=en_US"]},{"type":"character","attributes":{},"value":["Maestrando en Economía Urbana"]},{"type":"character","attributes":{},"value":["https://www.utdt.edu/"]}]}]},{"type":"character","attributes":{},"value":["2023-10-10"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2100,6 +2104,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+  <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="site_libs/leaflet-binding-2.2.0/leaflet.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2119,7 +2132,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Trabajo Final Instrumentos II","description":"Hernán Baulo Darhanpé","authors":[]}
+{"title":"Monitoreo de Techos verdes en CABA","description":"Colaboración para la mitigación del efecto isla de calor en la ciudad.","authors":[{"author":"Hernán Baulo Darhanpé","authorURL":"https://www.linkedin.com/in/hern%C3%A1n-baulo-darhanp%C3%A9-893ba913/?locale=en_US","affiliation":"Maestrando en Economía Urbana","affiliationURL":"https://www.utdt.edu/","orcidID":""}],"publishedDate":"2023-10-10T00:00:00.000-03:00","citationText":"Darhanpé, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2142,16 +2155,219 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Trabajo Final Instrumentos II</h1>
+<h1>Monitoreo de Techos verdes en CABA</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Hernán Baulo Darhanpé</p></p>
+<p><p>Colaboración para la mitigación del efecto isla de calor en la ciudad.</p></p>
 </div>
 
+<div class="d-byline">
+  Hernán Baulo Darhanpé <a href="https://www.linkedin.com/in/hern%C3%A1n-baulo-darhanp%C3%A9-893ba913/?locale=en_US" class="uri">https://www.linkedin.com/in/hern%C3%A1n-baulo-darhanp%C3%A9-893ba913/?locale=en_US</a> (Maestrando en Economía Urbana)<a href="https://www.utdt.edu/" class="uri">https://www.utdt.edu/</a>
+  
+<br/>2023-10-10
+</div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h1 id="beneficios-de-una-cubierta-vegetal">Beneficios de una cubierta vegetal:</h1>
+<p>Una cubierta vegetal ofrece numerosos beneficios a nivel económico, ecológico y social. Retiene el agua de lluvia, purifica el aire, reduce la temperatura ambiente, regula la temperatura, colabora con la aislación termica de los edificios y con esto contribuye con el ahorro de energía. Promueve ademas la biodiversidad en la ciudad. Las cubiertas verdes forman parte de la construcción bioclimática y representan una estrategia calve dentro del marco de adaptación al cambio climático.</p>
+<figure>
+<img src="https://ecohabitar.org/wp-content/uploads/2022/01/techo_verde1-1024x683.jpg" alt="cubierta_verde" />
+<figcaption aria-hidden="true">cubierta_verde</figcaption>
+</figure>
+<h1 id="trabajo-final-instrumentos-de-análisis-urbanos-ii"><strong>TRABAJO FINAL (Instrumentos de Análisis Urbanos II)</strong></h1>
+<h2 id="paso-1-planteo-de-la-pregunta-y-mínima-presentación-del-tema."><strong>Paso 1: Planteo de la pregunta y mínima presentación del tema.</strong></h2>
+<h3 id="introducción"><strong>Introducción</strong></h3>
+<p>Este informe tiene como objetivo analizar el dataset de techos verdes en Buenos Aires y responder a la pregunta:
+¿Cuál es la distribución de los techos verdes en la ciudad?</p>
+<h3 id="preguntas-de-investigación"><strong>Preguntas de Investigación</strong></h3>
+<ul>
+<li>¿Cuántos techos verdes existen en Buenos Aires?</li>
+<li>¿Cuál es la superficie total de techos verdes por barrio en la ciudad?</li>
+<li>¿Cuál es la ubicación geográfica de los techos verdes más grandes?</li>
+</ul>
+<h2 id="paso-2-descripción-de-los-pasos-y-posibles-obstáculos"><strong>Paso 2: Descripción de los pasos y posibles obstáculos</strong></h2>
+<h3 id="cargar-paquetes-necesarios"><strong>Cargar paquetes necesarios</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h2 id="paso-3importación-de-datos-o-acceso-de-los-mismos"><strong>Paso 3:Importación de datos o acceso de los mismos</strong></h2>
+<h3 id="obtener-y-cargar-los-datos"><strong>Obtener y cargar los datos</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="importación-de-datos-o-scrapping"><strong>Importación de datos o scrapping</strong></h3>
+<p>En este paso, ya hemos importado los datos del dataset de la web (BA data).</p>
+<h3 id="exploración-inicial-de-los-datos-head-y-summary"><strong>Exploración inicial de los datos (head y summary)</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>                                          WKT id id_techo publico_pr
+1 POINT (-58.3769377506221 -34.5930608985007)  1        1    Público
+2 POINT (-58.4220733202293 -34.5872710330921)  2        2    Público
+3 POINT (-58.4484452824777 -34.6600781847741)  3        3    Público
+4 POINT (-58.3924610480937 -34.5831159472187)  5        5    Público
+5 POINT (-58.4369206037304 -34.6058883389957)  6        6    Público
+6 POINT (-58.4629441517691 -34.5344405713501)  7        7    Público
+                                      edificio
+1        Escuela N° 6 D.E. 1  French y Berutti
+2 Escuela Media Número 7 María Claudia Falcone
+3    Escuela Media Número 7 D.E.19  JUAN XXIII
+4                     Facultad de Derecho, UBA
+5     Anfiteatro Eva Perón, Parque Centenario.
+6                           Centro Verde Nuñez
+                         direccion superficie fecha_ins
+1                 Basavilbaso 1295        240      2011
+2                     Malabia 2148          0      2013
+3              Mariano Acosta 2936          0      2013
+4         Av.Figueroa Alcorta 2263        406      2013
+5 Av. Patricias Argentinas y Lillo          0      2011
+6     Cantilo Int. y Av. Gral. Paz       2500      2012
+                                                                    emprendimiento
+1 Agencia de Protección Ambiental, Ministerio de Ambiente y Espacio Público, GCBA.
+2                                                                             GCBA
+3                                                                             GCBA
+4                                 Facultad de Derecho, Universidad de Buenos Aires
+5                                           Ministerio de Desarrollo Urbano, GCBA.
+6                                  Ministerio de Ambiente y Espacio Público, GCBA.
+                   proyecto         construccion
+1         Arq. Hugo Gilardi Cooperativa Arcangel
+2                                               
+3                                               
+4 Arq. Maria Jose leveratto          Solbio S.A.
+5                                               
+6                                               
+             tipo_cubierta                       calle calle_nro
+1 Cubierta Verde Extensiva                 BASAVILBASO      1295
+2 Cubierta Verde Extensiva                     MALABIA      2148
+3 Cubierta Verde Extensiva             ACOSTA, MARIANO      2936
+4 Cubierta Verde Extensiva FIGUEROA ALCORTA, PRES. AV.      2263
+5 Cubierta Verde Extensiva    PATRICIAS ARGENTINAS AV.        NA
+6 Cubierta Verde Extensiva               CANTILO, INT.        NA
+          calle2        barrio    comuna
+1                       Retiro  Comuna 1
+2                      Palermo Comuna 14
+3                Villa Soldati  Comuna 8
+4                     Recoleta  Comuna 2
+5      LILLO AV.     Caballito  Comuna 6
+6 PAZ, GRAL. AV.         Nuñez Comuna 13</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>     WKT                  id        id_techo      publico_pr       
+ Length:29          Min.   : 1   Min.   : 1.00   Length:29         
+ Class :character   1st Qu.: 9   1st Qu.: 9.00   Class :character  
+ Mode  :character   Median :61   Median :61.00   Mode  :character  
+                    Mean   :45   Mean   :44.86                     
+                    3rd Qu.:80   3rd Qu.:80.00                     
+                    Max.   :89   Max.   :88.00                     
+                                                                   
+   edificio          direccion           superficie    
+ Length:29          Length:29          Min.   :   0.0  
+ Class :character   Class :character   1st Qu.:  30.0  
+ Mode  :character   Mode  :character   Median : 196.5  
+                                       Mean   : 755.6  
+                                       3rd Qu.: 582.2  
+                                       Max.   :6500.0  
+                                       NA&#39;s   :1       
+   fecha_ins    emprendimiento       proyecto        
+ Min.   :2002   Length:29          Length:29         
+ 1st Qu.:2011   Class :character   Class :character  
+ Median :2013   Mode  :character   Mode  :character  
+ Mean   :2012                                        
+ 3rd Qu.:2014                                        
+ Max.   :2018                                        
+                                                     
+ construccion       tipo_cubierta         calle          
+ Length:29          Length:29          Length:29         
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+                                                         
+   calle_nro       calle2             barrio         
+ Min.   : 200   Length:29          Length:29         
+ 1st Qu.:1022   Class :character   Class :character  
+ Median :2263   Mode  :character   Mode  :character  
+ Mean   :2391                                        
+ 3rd Qu.:2936                                        
+ Max.   :7350                                        
+ NA&#39;s   :4                                           
+    comuna         
+ Length:29         
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+                   </code></pre>
+</div>
+<h2 id="paso-4-limpieza-y-transformación-de-datos"><strong>Paso 4: Limpieza y transformación de datos</strong></h2>
+<h3 id="eliminar-filas-duplicadas"><strong>Eliminar filas duplicadas</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="tratamiento-de-valores-faltantes"><strong>Tratamiento de valores faltantes</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="transformación-de-variables"><strong>Transformación de variables</strong></h3>
+<p>techos_verdes<span class="math inline">\(Superficie &lt;- as.numeric(gsub(&quot;,&quot;, &quot;.&quot;, techos_verdes\)</span>Superficie))</p>
+<h3 id="paso-5-visualización-de-la-información"><strong>Paso 5: Visualización de la información</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h2 id="paso-5-visualización-de-la-información-1"><strong>Paso 5: Visualización de la información</strong></h2>
+<h3 id="gráfico-de-barras-de-la-cantidad-de-techos-verdes-por-barrio"><strong>Gráfico de barras de la cantidad de techos verdes por barrio</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="tpfinal_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<h3 id="a-continuacion-se-acomodan-las-etiquetas"><strong>A continuacion se acomodan las etiquetas</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="tpfinal_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="aqui-se-destacan-los-barrios-con-mas-techos-verdes-agrgandoles-color"><strong>Aqui se destacan los barrios con mas techos verdes agrgandoles color</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="tpfinal_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+</div>
+<h3 id="a-continuacion-secomparan-los-barrios-pero-reuniendo-la-superficie-total-de-techos-verdes-por-barrio.-para-esto-se-crea-un-nuevo-dataset-superficie_barrios-con-la-suma"><strong>A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="se-oredenan-los-datos-de-mayor-a-menor"><strong>Se oredenan los datos de mayor a menor</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="se-crea-un-grafico-de-barras-para-comparar-ahora-los-barrios-de-acuerdo-con-las-superficies"><strong>Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="tpfinal_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
+</div>
+<h3 id="a-continuación-se-cargan-las-librerias-geoar-y-leaflet-para-generar-un-mapa-interactivo-con-la-localizacion-del-barrio-de-monserrat"><strong>A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-29855e13a39eec3633ef" style="width:624px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-29855e13a39eec3633ef">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addMarkers","args":[-34.6129737070506,-58.3830757855256,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.6129737070506,-34.6129737070506],"lng":[-58.3830757855256,-58.3830757855256]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h3 id="luego-se-suma-al-mapa-la-geolocalizacion-de-las-cubiertas-del-dot-en-saavedra-belgrano-y-nuñez-que-son-la-superficies-verdes-mas-importantes-de-caba-incluida-en-el-dataset"><strong>Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset</strong></h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4f1792a91803d1415d28" style="width:624px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-4f1792a91803d1415d28">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircles","args":[-34.5453295637046,-58.487777771958,300,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5471910926648,-58.4466777777443,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5604242454826,-58.4513817563059,200,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addCircles","args":[-34.5402781887907,-58.4734837459416,100,null,null,{"interactive":true,"className":"","stroke":true,"color":"green","weight":5,"opacity":0.5,"fill":true,"fillColor":"green","fillOpacity":0.2},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addTiles","args":["https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-34.5604242454826,-34.5402781887907],"lng":[-58.487777771958,-58.4466777777443]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 id="comentarios-finales"><strong>Comentarios finales</strong></h2>
+<h3 id="conclusiones"><strong>Conclusiones</strong>:</h3>
+<p>En el presente informe, hemos examinado el conjunto de datos relacionados con techos verdes en la ciudad de Buenos Aires y hemos respondido a nuestras preguntas de investigación. Durante este análisis, hemos observado una diversa distribución de techos verdes en varios barrios de la ciudad. Notablemente, Monserrat encabeza la lista con la mayor cantidad de techos verdes, seguido de cerca por el barrio de Recoleta.</p>
+<p>Sin embargo, es fundamental destacar que la importancia de estos techos verdes no solo radica en su cantidad, sino principalmente en su superficie. Esto se debe a que la superficie de estos techos representa, en última instancia, una contribución significativa al área absorbente en la superficie urbana impermeabilizada, además de desempeñar un papel crucial en la mitigación de los efectos de la isla de calor en la ciudad.</p>
+<p>Al observar los resultados desde esta perspectiva, notamos que el orden de importancia se reconfigura de manera significativa. En este nuevo enfoque, el barrio de Saavedra se destaca como el principal contribuyente en términos de superficie de techos verdes en la ciudad. Esto se evidencia claramente en el mapa, donde la concentración de techos verdes se encuentra principalmente en la cubierta del DOT. Seguido por los barrios de Belgrano y Nuñez.</p>
+<p>Es importante tener en cuenta que, aparte de los hallazgos, debemos considerar las limitaciones de los datos utilizados en este estudio. Esto incluye posibles deficiencias en la actualización de la información o en la calidad de los datos recopilados, factores que podrían influir en nuestras conclusiones.</p>
+<h3 id="obstáculosdesafios"><strong>Obstáculos/Desafios</strong>:</h3>
+<p>Durante el proceso, enfrentamos el desafío de tratar los valores faltantes y transformar la variable de superficie en un formato numérico. Además, la importancia de pensar el analisis en terminos de las varibales significativas en el marco del estudio. Finalmente es importante tener en cuenta que este análisis es preliminar y podría requerir un estudio más detallado en el futuro.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2159,6 +2375,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

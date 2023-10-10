@@ -1,10 +1,16 @@
 ---
-title: "About this site"
+title: "Trabajo Práctico Final"
 description: |
-  Some additional details about the website
+  TECHOS VERDES CABA
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+Aqui se encuentra el Trabajo Práctico Final del curso: MU106 - Instrumentos de Análisis Territorial Aplicados a Estudios Urbanos - Este seminario ha sido desarrollado en el marco de la Maestría de Economia Urbana. 
+
+Dictada por los profesores: Juan Pablo Ruiz Nicolini y Pablo Tiscornia. 
+
+El ejecicio fue realizado sobre una base de datos tomada de (Buenos Aires Data)  
+Fuente del data set: https://data.buenosaires.gob.ar/dataset/

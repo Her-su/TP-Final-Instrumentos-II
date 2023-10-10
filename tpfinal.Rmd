@@ -1,0 +1,212 @@
+---
+title: "Monitoreo de Techos verdes en CABA"
+description: |
+  Colaboración para la mitigación del efecto isla de calor en la ciudad.
+author:
+  - name: Hernán Baulo Darhanpé 
+    url: https://www.linkedin.com/in/hern%C3%A1n-baulo-darhanp%C3%A9-893ba913/?locale=en_US
+    affiliation: Maestrando en Economía Urbana 
+    affiliation_url: https://www.utdt.edu/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Beneficios de una cubierta vegetal: 
+
+Una cubierta vegetal ofrece numerosos beneficios a nivel económico, ecológico y social. Retiene el agua de lluvia, purifica el aire, reduce la temperatura ambiente, regula la temperatura, colabora con la aislación termica de los edificios y con esto contribuye con el ahorro de energía. Promueve ademas la biodiversidad en la ciudad. Las cubiertas verdes forman parte de la construcción bioclimática y representan una estrategia calve dentro del marco de adaptación al cambio climático. 
+
+![cubierta_verde](https://ecohabitar.org/wp-content/uploads/2022/01/techo_verde1-1024x683.jpg)
+
+
+# **TRABAJO FINAL (Instrumentos de Análisis Urbanos II)**
+
+
+## **Paso 1: Planteo de la pregunta y mínima presentación del tema.**
+
+### **Introducción**
+Este informe tiene como objetivo analizar el dataset de techos verdes en Buenos Aires y responder a la pregunta: 
+¿Cuál es la distribución de los techos verdes en la ciudad?
+
+### **Preguntas de Investigación**
+
+- ¿Cuántos techos verdes existen en Buenos Aires?
+- ¿Cuál es la superficie total de techos verdes por barrio en la ciudad?
+- ¿Cuál es la ubicación geográfica de los techos verdes más grandes?
+
+## **Paso 2: Descripción de los pasos y posibles obstáculos**
+
+### **Cargar paquetes necesarios**
+
+
+```{r}
+library(tidyverse)
+```
+
+## **Paso 3:Importación de datos o acceso de los mismos**
+
+### **Obtener y cargar los datos**
+
+```{r}
+url <- "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-de-proteccion-ambiental/mapa-techos-verdes/mapa-techos-verdes.csv"
+techos_verdes <- read.csv(url)
+```
+
+### **Importación de datos o scrapping**
+
+En este paso, ya hemos importado los datos del dataset de la web (BA data).
+
+
+### **Exploración inicial de los datos (head y summary)** 
+
+```{r}
+head(techos_verdes)
+```
+```{r}
+summary(techos_verdes)
+```
+
+
+## **Paso 4: Limpieza y transformación de datos**
+
+### **Eliminar filas duplicadas**
+
+```{r}
+techos_verdes <- techos_verdes[!duplicated(techos_verdes), ]
+```
+
+
+### **Tratamiento de valores faltantes**
+
+```{r}
+techos_verdes <- techos_verdes %>% drop_na()
+```
+
+
+### **Transformación de variables**
+
+techos_verdes$Superficie <- as.numeric(gsub(",", ".", techos_verdes$Superficie))
+
+### **Paso 5: Visualización de la información**
+
+```{r}
+library(ggplot2)
+```
+
+## **Paso 5: Visualización de la información**
+
+### **Gráfico de barras de la cantidad de techos verdes por barrio**
+
+```{r}
+ggplot(techos_verdes, aes(x = barrio)) +
+  geom_bar() +
+  labs(title = "Cantidad de Techos Verdes por Barrio")
+```
+
+### **A continuacion se acomodan las etiquetas**
+
+```{r}
+ggplot(techos_verdes, aes(x = barrio)) +
+  geom_bar() +
+  labs(title = "Cantidad de Techos Verdes por Barrio") + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+```{r}
+library(dplyr)
+```
+
+### **Aqui se destacan los barrios con mas techos verdes agrgandoles color** 
+
+```{r}
+ggplot(techos_verdes, aes(x = barrio)) +
+  geom_bar() +
+  labs(title = "Cantidad de Techos Verdes por Barrio") + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +  geom_bar(data = techos_verdes %>%
+             filter(barrio == "Monserrat"),
+           fill = "red") +
+  geom_bar(data = techos_verdes %>%
+             filter(barrio == "Recoleta"),
+           fill = "orange")
+```
+
+### **A continuacion secomparan los barrios pero reuniendo la superficie total de techos verdes por barrio. Para esto se crea un nuevo dataset (superficie_barrios) con la suma**
+
+```{r}
+superficie_barrios <- techos_verdes %>%
+  group_by(barrio) %>%
+  summarize(superficie_Total = sum(superficie))
+
+```
+
+### **Se oredenan los datos de mayor a menor**
+
+```{r}
+superficie_barrios <- superficie_barrios %>%
+  arrange(desc(superficie_Total))
+```
+
+
+### **Se crea un grafico de barras para comparar ahora los barrios de acuerdo con las superficies**
+
+```{r}
+ggplot(superficie_barrios, aes(x = reorder(barrio, -superficie_Total), y = superficie_Total)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(title = "Comparacion de Superficie de Techos Verdes por Barrio",
+       x = "Barrio",
+       y = "Superficie Total en m2") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
+
+
+
+### **A continuación se cargan las librerias geoAR y leaflet para generar un mapa interactivo con la localizacion del Barrio de Monserrat**
+
+```{r}
+library(geoAr)
+```
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+
+leaflet() %>% 
+  addMarkers(lng = -58.38307578552556, lat=-34.61297370705064) %>%  
+  geoAr::addArgTiles()
+```
+
+### **Luego se suma al mapa la geolocalizacion de las cubiertas del DOT en Saavedra, Belgrano y Nuñez que son la superficies verdes mas importantes de CABA incluida en el dataset**
+
+
+```{r}
+leaflet() %>% 
+  addCircles(lng = -58.487777771958, lat = -34.5453295637046, color = "green", radius = 300) %>% 
+  addCircles(lng = -58.4466777777443, lat = -34.5471910926648, color = "green", radius = 200) %>%  
+  addCircles(lng = -58.4513817563059, lat = -34.5604242454826, color = "green", radius = 200) %>% 
+  addCircles(lng = -58.4734837459416, lat = -34.5402781887907, color = "green", radius = 100) %>% 
+  geoAr::addArgTiles()
+```
+
+
+
+## **Comentarios finales**
+
+### **Conclusiones**: 
+
+En el presente informe, hemos examinado el conjunto de datos relacionados con techos verdes en la ciudad de Buenos Aires y hemos respondido a nuestras preguntas de investigación. Durante este análisis, hemos observado una diversa distribución de techos verdes en varios barrios de la ciudad. Notablemente, Monserrat encabeza la lista con la mayor cantidad de techos verdes, seguido de cerca por el barrio de Recoleta.
+
+Sin embargo, es fundamental destacar que la importancia de estos techos verdes no solo radica en su cantidad, sino principalmente en su superficie. Esto se debe a que la superficie de estos techos representa, en última instancia, una contribución significativa al área absorbente en la superficie urbana impermeabilizada, además de desempeñar un papel crucial en la mitigación de los efectos de la isla de calor en la ciudad.
+
+Al observar los resultados desde esta perspectiva, notamos que el orden de importancia se reconfigura de manera significativa. En este nuevo enfoque, el barrio de Saavedra se destaca como el principal contribuyente en términos de superficie de techos verdes en la ciudad. Esto se evidencia claramente en el mapa, donde la concentración de techos verdes se encuentra principalmente en la cubierta del DOT. Seguido por los barrios de Belgrano y Nuñez.
+
+Es importante tener en cuenta que, aparte de los hallazgos, debemos considerar las limitaciones de los datos utilizados en este estudio. Esto incluye posibles deficiencias en la actualización de la información o en la calidad de los datos recopilados, factores que podrían influir en nuestras conclusiones.
+
+### **Obstáculos/Desafios**:
+
+Durante el proceso, enfrentamos el desafío de tratar los valores faltantes y transformar la variable de superficie en un formato numérico. Además, la importancia de pensar el analisis en terminos de las varibales significativas en el marco del estudio. Finalmente es importante tener en cuenta que este análisis es preliminar y podría requerir un estudio más detallado en el futuro.
+
+
+
