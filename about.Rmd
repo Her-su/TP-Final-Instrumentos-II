@@ -8,7 +8,8 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![logo_tidy](https://rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/ds.png)
+![logo_Homero](https://38.media.tumblr.com/11daabda17d321f53cf30b209a91cbfe/tumblr_nicswh8CBn1qh59n0o1_500.gif)
+
 
 
 Aqui se encuentra el Trabajo Práctico Final del curso: MU106 - Instrumentos de Análisis Territorial Aplicados a Estudios Urbanos - Este seminario ha sido desarrollado en el marco de la Maestría de Economia Urbana. 
